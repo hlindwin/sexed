@@ -168,11 +168,15 @@
             <div class="p-5">
               <h2 class="display-4">Contact me</h2>
               <p>
+                <div class="col-lg-6">
                 <form method="POST" action="https://formspree.io/hlindwin@gmail.com">
                   <br><input type="email" name="email" placeholder="Your email">
-                  <br><textarea name="message" placeholder="Your message"></textarea>
+                  <br><textarea style="width:500px; height:150px;"
+                    onkeyup="auto_grow(this)" name="message" placeholder="Your message"></textarea>
                   <br><button type="submit">Send</button>
+
                 </form>
+              </div>
                 </p>
             </div>
           </div>
@@ -226,6 +230,14 @@
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
+
+    function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight)+"px";
+    element.style.width = "5px";
+    element.style.width = (element.scrollWidth)+"px";
+}
+
     </script>
   </body>
 
